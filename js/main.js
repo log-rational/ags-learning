@@ -32,7 +32,7 @@ require([
             {
                 elem: 'mapDiv',
                 mapOptions: {
-                    basemap: 'gray',
+                    basemap: 'dark-gray-vector',
                     zoom: 12,
                     center: [-118.251, 34.0452]
                 }
