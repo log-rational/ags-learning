@@ -66,6 +66,7 @@ define([
             attrInspector: null,
             attrLayer: null,
             moveToolbar: null,
+            isEditing: false,
             fieldInfos: [
                 {
                     label: "Asignee",
@@ -140,7 +141,7 @@ define([
 
             },
             _toggleEditing: function () {
-                console.log("Toggle")
+                this.editing = !this.editing;
             },
             _mapClickHandler: function (e) {
 
