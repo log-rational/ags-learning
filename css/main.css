@@ -1,0 +1,71 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('/assets/fonts/Pokemon\ Solid.ttf');
+}
+
+@font-face {
+    font-family: 'Pokemon Hollow';
+    src: url('/assets/fonts/Pokemon\ Hollow.ttf');
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#slotEditWidget {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    font-size: 0.8em;
+    
+}
+
+#slotHomeButton {
+    position: absolute;
+    top: 95px;
+    left: 25px;
+    z-index: 20;
+}
+
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 62px;
+    padding: 0.1em 0.22em;
+
+}
+
+nav h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pokemon Hollow';
+    font-size: 2em;
+    color: black;
+    -webkit-text-fill-color: #ffcb05;
+    -webkit-text-fill-color: #3d7dca;
+
+    /* Will override color (regardless of order) */
+    /* -webkit-text-stroke-width: 0.08em; */
+    -webkit-text-stroke-color: #3d7dca;
+    line-height: 62px;
+    /* padding: 2em; */
+}
+
+.dijitButtonNode {
+    right: 0;
+}

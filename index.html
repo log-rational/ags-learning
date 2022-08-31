@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="module" src="https://js.arcgis.com/calcite-components/1.0.0-beta.91/calcite.esm.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.0.0-beta.91/calcite.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.41/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.41/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+        var loadingState = 'Loading';
+        var errorState = '';
+        var dojoConfig = {
+            parseOnLoad: true
+        }
+    </script>
+    <title>Login Demo</title>
+</head>
+
+<body class="nihilo">
+    <main data-dojo-type="dijit/layout/BorderContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top'">
+            <nav>
+                <h1>
+                    Pokemon Catch
+                </h1>
+                <div style="text-align: right;">
+                    <span style="text-align: right; margin-bottom: 0.4em;">
+                        <p style="display: block; margin: 0.4em 0 0.2em 0;">Hello, Guest!</p>
+                    </span>
+                    <calcite-button>Log into ArcGIS Online</calcite-button>
+                </div>
+            </nav>
+        </div>
+        <div id="mapDiv" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+            <div id="slotEditWidget"> </div>
+            <div id="slotHomeButton"></div>
+        </div>
+    </main>
+</body>
+
+<script src="//js.arcgis.com/3.41/"></script>
+<script src="./js/run.js"></script>
+
+</html>
