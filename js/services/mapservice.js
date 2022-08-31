@@ -1,7 +1,10 @@
 define([
-    'esri/layers/FeatureLayer'
+    'esri/layers/FeatureLayer', 
+    'utils/symbolUtil'
 ], function (
-    FeatureLayer
+    FeatureLayer, 
+    symbolUtil
+    
 ) {
     function loadLayers() {
         const layers = []
@@ -10,6 +13,7 @@ define([
             outField: ['*'], id: 'requests',
             
         });
+        reqLayer.setRenderer(symbolUtil.getPokeMarkerRenderer())
         layers.push(reqLayer)
 
         return layers

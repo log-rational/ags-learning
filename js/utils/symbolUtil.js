@@ -2,11 +2,14 @@ define([
     'esri/Color',
     'esri/symbols/SimpleMarkerSymbol',
     'esri/symbols/SimpleLineSymbol',
+    'esri/symbols/PictureMarkerSymbol',
     'esri/renderers/SimpleRenderer',
+
 ], function (
     Color,
     SimpleMarkerSymbol,
     SimpleLineSymbol,
+    PictureMarkerSymbol,
     SimpleRenderer
 ) {
     const moveMarkerSymbol = new SimpleMarkerSymbol(
@@ -22,12 +25,14 @@ define([
         new Color([255, 0, 0])
     )
 
-    // new SimpleMarkerSymbol().setStyle(SimpleMarkerSymbol.STYLE_CIRCLE).setColor([255, 0, 0, 0.2])
+    const pokeMarker = new PictureMarkerSymbol('assets/images/pokeball.png', 14, 14)
+    
     return {
+        pokeMarker,
         moveMarkerSymbol,
         selectedMarkerSymbol,
-        getSimpleRenderer: function () {
-            return new SimpleRenderer(simpleMarkerSymbol);
+        getPokeMarkerRenderer: function () {
+            return new SimpleRenderer(pokeMarker)
         }
     }
 });
