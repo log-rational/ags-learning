@@ -185,8 +185,8 @@ define([
                 )
 
                 on(this.moveToolbar,
-                    'deactivate',
-                    lang.hitch(this, '_onMoveToolbarDeactivated')
+                    'graphic-move-stop',
+                    lang.hitch(this, '_graphicMoveStopHandler')
                 )
 
                 if (!this.attrLayer.loaded) {
@@ -221,11 +221,12 @@ define([
                 this.moveToolbar.activate(Edit.MOVE, e.graphic)
             },
 
-            _onMoveToolbarDeactivated: function (e) {
+            _graphicMoveStopHandler: function (e) {
                 console.debug("Edit Completed")
                 e.graphic.setSymbol(null)
                 this.pokeLayer.applyEdits(null, [e.graphic], null)
 
+                console.log(this.moveToolbar.getCurrentState())
             }
 
 
